@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "b205eca8-9575-4e00-b9a4-d29d075fc628",
+		"name": "SKAD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16597888"
+	},
+	"item": [
+		{
+			"name": "userRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe1\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"phone\": \"1234567890\",\r\n    \"password\": \"password12\",\r\n    \"role\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"john.doe@example.com\",  // or phone \r\n    \"password\": \"password12\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "userDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiaXNBY3RpdmVcIjowLFwiX2lkXCI6XCI2NjM2MjAzNzJhNGM1MzI1ZWM3MDcwMGRcIixcIm5hbWVcIjpcIkpvaG4gRG9lXCIsXCJlbWFpbFwiOlwiam9obi5kb2VAZXhhbXBsZS5jb21cIixcInBob25lXCI6XCIxMjM0NTY3ODkwXCIsXCJwYXNzd29yZFwiOlwiXCIsXCJyb2xlXCI6MSxcIl9fdlwiOjAsXCJsb2dpbkRldGFpbHNcIjpbe1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMDg6NDE6NDcuNjczWlwiLFwiX2lkXCI6XCI2NjM1ZjRjYjA4MGFmNmE3ZjA4YWUxOWZcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTE6NTQ6MzAuMzg4WlwiLFwiX2lkXCI6XCI2NjM2MjFmNmExOTlkMWJhZGJhYzBlYWVcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTE6NTY6MjUuNzgwWlwiLFwiX2lkXCI6XCI2NjM2MjI2OThiNzE0MjRjNDFiNzc2ODNcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTE6MDguMjA4WlwiLFwiX2lkXCI6XCI2NjM2MjVkYzBkZTc1ODNmYzdlZmY0NzVcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTE6NTYuMTU2WlwiLFwiX2lkXCI6XCI2NjM2MjYwYzcxOTAxN2RlYTJhNWMwZjlcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTM6MjEuNTQ0WlwiLFwiX2lkXCI6XCI2NjM2MjY2MTA3MjljNzJkYmZlNzI3MWFcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTM6MjkuMTYxWlwiLFwiX2lkXCI6XCI2NjM2MjY2OTA3MjljNzJkYmZlNzI3MjNcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTM6NDEuODYyWlwiLFwiX2lkXCI6XCI2NjM2MjY3NTBhNzM5OWI5ODFmYTIxN2NcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTQ6MDAuNTM0WlwiLFwiX2lkXCI6XCI2NjM2MjY4ODQwNGUyNDE3NzBlMmYwMzJcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTQ6MTguODc0WlwiLFwiX2lkXCI6XCI2NjM2MjY5YTljMWE1ZWFhNzg5ZGQwZjhcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MTg6NTAuOTkxWlwiLFwiX2lkXCI6XCI2NjM2MjdhYmExZjVmMmIyNTcyNzgyNzNcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjE6MzkuMzI0WlwiLFwiX2lkXCI6XCI2NjM2Mjg1M2YwMDYwNjA3ZjI4NjhmZGNcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjE6NTUuMjU2WlwiLFwiX2lkXCI6XCI2NjM2Mjg2M2FiYzhiMTNmYmIwY2ZhOGJcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjI6MzcuNTAyWlwiLFwiX2lkXCI6XCI2NjM2Mjg4ZGI4ZjA4OTFlZTgzODQ4MThcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjI6NTUuNzQzWlwiLFwiX2lkXCI6XCI2NjM2Mjg5ZjkwNTVkNzcyZjYyZTdkN2ZcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjU6MjUuMTUzWlwiLFwiX2lkXCI6XCI2NjM2MjkzNWZmOTE5NDA3MjMwNDdjZmFcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6MjY6MjYuNzQ1WlwiLFwiX2lkXCI6XCI2NjM2Mjk3MmQxZjQxZGVlNGU1N2IwMDBcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6Mjc6NTAuNjA1WlwiLFwiX2lkXCI6XCI2NjM2MjljNjQ4NjE4NDA5M2E2NmJkY2FcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6Mjg6MjAuOTY5WlwiLFwiX2lkXCI6XCI2NjM2MjllNDQ1NjU2NzA0MWViYjA3Y2NcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6Mjk6MDUuNTc0WlwiLFwiX2lkXCI6XCI2NjM2MmExMWVlZTA3MzNjZTlmYWU0MGVcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6Mzg6MjQuMzc2WlwiLFwiX2lkXCI6XCI2NjM2MmM0MGMxMTM1MzJlM2VkNDkwNTBcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6NDU6NDYuMzY5WlwiLFwiX2lkXCI6XCI2NjM2MmRmYTE2Y2NiMjdhZWNiNDM0MzlcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6NDc6MDguMTAwWlwiLFwiX2lkXCI6XCI2NjM2MmU0Yzk3ODNmM2M0MjNmYmQ5M2VcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6NTA6MjguNzgwWlwiLFwiX2lkXCI6XCI2NjM2MmYxNDkyYzAzNWQwZDdlNGI1Y2ZcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6NTc6MDcuNTc2WlwiLFwiX2lkXCI6XCI2NjM2MzBhMzkyYzAzNWQwZDdlNGI1ZWFcIn0se1wibG9nZ2VkQXRcIjpcIjIwMjQtMDUtMDRUMTI6NTg6NTIuOTExWlwiLFwiX2lkXCI6XCI2NjM2MzEwY2M3ODgzNDhjMGQ3YWUwNDlcIn1dLFwidXBkYXRlZEF0XCI6XCIyMDI0LTA1LTA0VDEyOjU4OjUyLjkxNVpcIn0iLCJpYXQiOjE3MTQ4Mjc4NzIsImV4cCI6MTcxNDgyOTA3Mn0.-B_ng17-qWDGf0al0yDv1Mz_3aoFqgI6b3XWLBNPVL4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:3000/user/details"
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiaXNBY3RpdmVcIjowLFwiX2lkXCI6XCI2NjM1ZDk4ODVhMjg3ZTRmYmQzNTFiZjZcIixcIm5hbWVcIjpcIkpvaG4gRG9lXCIsXCJlbWFpbFwiOlwiam9obi5kb2VAZXhhbXBsZS5jb21cIixcInBob25lXCI6XCIxMjM0NTY3ODkwXCIsXCJwYXNzd29yZFwiOlwiXCIsXCJyb2xlc1wiOjEsXCJfX3ZcIjowLFwibG9naW5EZXRhaWxzXCI6W3tcImxvZ2dlZEF0XCI6XCIyMDI0LTA1LTA0VDA4OjQxOjQ3LjY3M1pcIixcIl9pZFwiOlwiNjYzNWY0Y2IwODBhZjZhN2YwOGFlMTlmXCJ9LHtcImxvZ2dlZEF0XCI6XCIyMDI0LTA1LTA0VDA4OjQzOjA0LjUwMVpcIixcIl9pZFwiOlwiNjYzNWY1MTg3M2M5NzZlMTM5MDUxM2Q3XCJ9LHtcImxvZ2dlZEF0XCI6XCIyMDI0LTA1LTA0VDA4OjQ1OjA4Ljg3OVpcIixcIl9pZFwiOlwiNjYzNWY1OTRmNjI1NTdkYWYwOWNjMDMyXCJ9LHtcImxvZ2dlZEF0XCI6XCIyMDI0LTA1LTA0VDEwOjU3OjAxLjA4M1pcIixcIl9pZFwiOlwiNjYzNjE0N2Q5NzQ2OWM2NWE1MzY3ODJmXCJ9LHtcImxvZ2dlZEF0XCI6XCIyMDI0LTA1LTA0VDEwOjU4OjQ0LjE0MVpcIixcIl9pZFwiOlwiNjYzNjE0ZTQ1MDIxMmM3ZDUxMDNjODk3XCJ9XSxcInVwZGF0ZWRBdFwiOlwiMjAyNC0wNS0wNFQxMDo1ODo0NC4xNDNaXCJ9IiwiaWF0IjoxNzE0ODIwMzU3LCJleHAiOjE3MTQ4MjM5NTd9.yZ09s4H_MhTeUwNvCrIm1knWJ5pHD_nCNcVGmhEC5qU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \t\"email\": \"naruto.uzumakiLeaf@example.com\",\r\n        \"phone\":\"78768767867\",\r\n        \"name\":\"Naruto\",\r\n        \"password\":\"naruto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/update/66363e0da29fff5a9229f26a"
+			},
+			"response": []
+		},
+		{
+			"name": "user logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/user/logout"
+			},
+			"response": []
+		}
+	]
+}
